@@ -156,16 +156,19 @@ $(document).ready(function(){
 // $("p").dblclick(function(){
 //   $(this).hide();
 // });
- });
+  $("#p1").mouseenter(function(){
+    alert('您的鼠标移到了 id="p1" 的元素上!');
+  });
+});
 
 
 </script>
 </head>
 <body>
 
-<p>如果你点我，我就会消失。</p>
-<p>点我消失!</p>
-<p>点我也消失!</p>
+<p id="p1">如果你点我，我就会消失。</p>
+<p id="p1">点我消失!</p>
+<p id="p1">点我也消失!</p>
 
 </body>
 </html>
