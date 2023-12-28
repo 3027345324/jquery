@@ -41,34 +41,34 @@
 
 
 <!-- 淡入淡出 -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
 </script>
 <script>
-// fadein 和fadeout
-// $(document).ready(function(){
-//   $("#fadein").click(function(){
-//     $("#div1").fadeIn();
-//     $("#div2").fadeIn("slow");
-//     $("#div3").fadeIn(3000);
-//   });
-//   $("#fadeout").click(function(){
-//     $("#div1").fadeOut();
-//     $("#div2").fadeOut("slow");
-//     $("#div3").fadeOut(3000);
-//   });
-// });
-// fadetoggle
-// $(document).ready(function(){
-//   $("#fadetoggle").click(function(){
-//     $("#div1").fadeToggle();
-//     $("#div2").fadeToggle("slow");
-//     $("#div3").fadeToggle(3000);
-//   });
-// });
+//fadein 和fadeout
+$(document).ready(function(){
+  $("#fadein").click(function(){
+    $("#div1").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+  $("#fadeout").click(function(){
+    $("#div1").fadeOut();
+    $("#div2").fadeOut("slow");
+    $("#div3").fadeOut(3000);
+  });
+});
+//fadetoggle
+$(document).ready(function(){
+  $("#fadetoggle").click(function(){
+    $("#div1").fadeToggle();
+    $("#div2").fadeToggle("slow");
+    $("#div3").fadeToggle(3000);
+  });
+});
 //fadeto渐变
 $(document).ready(function(){
     $("button").click(function(){
@@ -78,15 +78,60 @@ $(document).ready(function(){
 });
 });
 </script>
-</head>
-<body>
-    <button id="fadein">点击淡入 div 元素。</button>
+ </head>
+ <body>
+     <button id="fadein">点击淡入 div 元素。</button>
     <button id="fadeout">点击淡出 div 元素。</button>
-    <button id="fadetoggle">点击淡出淡入 div 元素。</button>
-    <button id="fadeto">点击 渐变div 元素。</button>
-    <br><br>
+     <button id="fadetoggle">点击淡出淡入 div 元素。</button>
+     <button id="fadeto">点击 渐变div 元素。</button>
+     <br><br>
     <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
     <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
-    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+     <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+</body>
+</html> -->
+
+<!-- 滑动 -->
+<html>
+<head>
+<meta charset="utf-8">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script> 
+    $(document).ready(function(){
+        //下滑
+        // $("#flip").click(function(){
+        //     $("#panel").slideDown("slow");
+        // });
+        // 上拉
+        // $("#flip").click(function(){
+        //      $("#panel").slideUp();
+        // });
+        $("#flip").click(function(){
+             $("#panel").slideToggle();
+        });
+    });
+</script>
+ 
+<style type="text/css"> 
+#panel,#flip
+{
+	padding:5px;
+	text-align:center;
+	background-color:#0b84e0;
+	border:solid 1px #9d2d2d;
+}
+#panel
+{
+	padding:50px;
+	display:none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">点我滑下面板</div>
+<div id="panel">Hello world!</div>
+
 </body>
 </html>
