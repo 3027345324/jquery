@@ -166,10 +166,19 @@ $(document).ready(function(){
 //     alert('您的鼠标离开 id="p1" 的元素上!');
 //   });
 
-$("#p1").mousedown(function(){
-    alert('您的鼠标移到了 id="p1" 的元素上!');
-   });
+// $("#p1").mousedown(function(){
+//     alert('您的鼠标按下');
+//    });
+// $('#p1').mouseup(function(){
+//   alert('你的鼠标松开');
+// });
+
+// hover 效果
+$('#p1').hover(function(){
+  alert('你进入了p1');
+});
  });
+
 
 </script>
 </head>
