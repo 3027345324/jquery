@@ -136,7 +136,7 @@ $(document).ready(function(){
 </body>
 </html> -->
 
-
+<!-- 鼠标事件 -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -156,11 +156,20 @@ $(document).ready(function(){
 // $("p").dblclick(function(){
 //   $(this).hide();
 // });
-  $("#p1").mouseenter(function(){
-    alert('您的鼠标移到了 id="p1" 的元素上!');
-  });
-});
 
+// 移上/移开
+//   $("#p1").mouseenter(function(){
+//     alert('您的鼠标移到了 id="p1" 的元素上!');
+//   });
+// });
+// $("#p1").mouseleave(function(){
+//     alert('您的鼠标离开 id="p1" 的元素上!');
+//   });
+
+$("#p1").mousedown(function(){
+    alert('您的鼠标移到了 id="p1" 的元素上!');
+   });
+ });
 
 </script>
 </head>
