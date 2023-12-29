@@ -67,15 +67,15 @@
       var slides = slider.find('.slide');
       var currentSlide = 0;
       slides.eq(currentSlide).addClass('active');
+    //   上一张
       $('.prev').click(function() {
- 
         currentSlide--;
         if (currentSlide < 0) {
           currentSlide = slides.length - 1;
         }
         switchSlide();
       });
-
+    //   下一张
       $('.next').click(function() {
         currentSlide++;
         if (currentSlide > slides.length - 1) {
