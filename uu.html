@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style>
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .slide.active {
+      opacity: 1;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 10px;
+      font-size: 18px;
+      background-color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <div class="slide active">
+      <img src="https://tse1-mm.cn.bing.net/th/id/OIP-C.r3rV-ouf79EfJHnC3X2sRAHaEo?rs=1&pid=ImgDetMain" alt="">
+    </div>
+    <div class="slide">
+      <img src="https://img.zhisheji.com/bbs/forum/201406/24/160857zwanvxq1xina0wom.jpg" alt="">
+    </div>
+    <div class="slide">
+      <img src="https://gss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/6609c93d70cf3bc7cced904ad400baa1cc112aa2.jpg" alt="">
+    </div>
+  </div>
+
+  <button class="prev">Previous</button>
+  <button class="next">Next</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var slider = $('.slider');
+      var slides = slider.find('.slide');
+      var currentSlide = 0;
+      slides.eq(currentSlide).addClass('active');
+      $('.prev').click(function() {
+ 
+        currentSlide--;
+        if (currentSlide < 0) {
+          currentSlide = slides.length - 1;
+        }
+        switchSlide();
+      });
+
+      $('.next').click(function() {
+        currentSlide++;
+        if (currentSlide > slides.length - 1) {
+          currentSlide = 0;
+        }
+        switchSlide();
+      });
+
+      function switchSlide() {
+        slides.removeClass('active');
+        slides.eq(currentSlide).addClass('active');
+      }
+    });
+  </script>
+</body>
+</html>
