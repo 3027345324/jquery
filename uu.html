@@ -5,11 +5,10 @@
   <style>
     .slider {
       position: relative;
-      width: 100%;
-      height: 400px;
+      width: 200px;
+      height: 200px;
       overflow: hidden;
     }
-
     .slide {
       position: absolute;
       top: 0;
@@ -23,7 +22,10 @@
     .slide.active {
       opacity: 1;
     }
-
+    .slide.active>img{
+      width: 200px;
+      height: 200px;
+    }
     .prev, .next {
       position: absolute;
       top: 50%;
@@ -83,7 +85,6 @@
         }
         switchSlide();
       });
-
       function switchSlide() {
         slides.removeClass('active');
         slides.eq(currentSlide).addClass('active');
