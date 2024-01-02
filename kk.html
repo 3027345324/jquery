@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 <!-- 松开 -->
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8"> 
@@ -75,6 +75,39 @@ $(document).ready(function(){
 
 输入你的名字: <input type="text">
 <p>在以上输入框中输入你的名字。在按键按下后输入框背景颜色会改变。</p>
+
+</body>
+</html> -->
+<!-- 表单事件 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title></title> 
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+  //subnit 提交表单时发生submit事件  只适用于form
+$(document).ready(function(){
+  $('form').submit(function(){
+  alert('提交');
+});
+});
+</script>
+</head>
+<body>
+<!-- submit -->
+<!-- <form action="">
+First name: 
+<input type="text" name="FirstName" value="Mickey"><br>
+Last name: 
+<input type="text" name="LastName" value="Mouse"><br>
+<input type="submit" value="提交">
+</form>  -->
+
+<!-- change -->
+<input type="text">
+<p></p>
 
 </body>
 </html>
