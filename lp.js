@@ -1,4 +1,18 @@
 //去重
-const arr = [1, 2, 2, 3, 4, 4, 5];
-const uniqueArr = [...new Set(arr)];
-console.log(uniqueArr); // [1, 2, 3, 4, 5]
+// const arr = [1, 2, 2, 3, 4, 4, 5];
+// const uniqueArr = [...new Set(arr)];
+// console.log(uniqueArr); // [1, 2, 3, 4, 5]
+
+// 获取当前时间
+const now = new Date();
+
+const year = now.getFullYear();
+const month = ('0' + (now.getMonth() + 1)).slice(-2);
+const day = ('0' + now.getDate()).slice(-2);
+const hours = ('0' + now.getHours()).slice(-2);
+const minutes = ('0' + now.getMinutes()).slice(-2);
+const seconds = ('0' + now.getSeconds()).slice(-2);
+
+const formattedTime = year +"/" +month +"/"+ day +"/"+ hours+":" + minutes+":" + seconds;
+
+console.log(formattedTime)
